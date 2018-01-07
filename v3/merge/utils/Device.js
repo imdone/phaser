@@ -806,7 +806,7 @@ Phaser.Device._initialize = function () {
             device.getUserMedia = false;
         }
 
-        // TODO: replace canvasBitBltShift detection with actual feature check
+        // TODO: replace canvasBitBltShift detection with actual feature check id:283 gh:284
 
         // Excludes iOS versions as they generally wrap UIWebView (eg. Safari WebKit) and it
         // is safer to not try and use the fast copy-over method.

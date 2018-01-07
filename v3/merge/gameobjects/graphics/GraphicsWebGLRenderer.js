@@ -791,7 +791,7 @@ Phaser.Renderer.WebGL.GameObjects.Graphics = {
             minX, maxY
         );
 
-        //  TODO: Is this even needed?
+        //  TODO: Is this even needed? id:267 gh:268
         var length = points.length / 2;
 
         for (i = 0; i < length; i++)

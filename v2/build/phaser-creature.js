@@ -18119,7 +18119,7 @@ Phaser.Touch.prototype = {
 
         //  event.targetTouches = list of all touches on the TARGET ELEMENT (i.e. game dom element)
         //  event.touches = list of all touches on the ENTIRE DOCUMENT, not just the target element
-        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them
+        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them id:135 gh:136
         for (var i = 0; i < event.changedTouches.length; i++)
         {
             this.game.input.startPointer(event.changedTouches[i]);
@@ -18269,7 +18269,7 @@ Phaser.Touch.prototype = {
 
         //  For touch end its a list of the touch points that have been removed from the surface
         //  https://developer.mozilla.org/en-US/docs/DOM/TouchList
-        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them
+        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them id:118 gh:119
         for (var i = 0; i < event.changedTouches.length; i++)
         {
             this.game.input.stopPointer(event.changedTouches[i]);
@@ -32256,7 +32256,7 @@ PIXI.WebGLGraphics.buildCircle = function(graphicsData, webGLData)
     var width;
     var height;
     
-    // TODO - bit hacky??
+    // TODO - bit hacky?? id:95 gh:96
     if(graphicsData.type === PIXI.Graphics.CIRC)
     {
         width = circleData.radius;
@@ -32332,7 +32332,7 @@ PIXI.WebGLGraphics.buildCircle = function(graphicsData, webGLData)
  */
 PIXI.WebGLGraphics.buildLine = function(graphicsData, webGLData)
 {
-    // TODO OPTIMISE!
+    // TODO OPTIMISE! id:93 gh:94
     var i = 0;
     var points = graphicsData.points;
     if(points.length === 0)return;
@@ -32544,7 +32544,7 @@ PIXI.WebGLGraphics.buildLine = function(graphicsData, webGLData)
  */
 PIXI.WebGLGraphics.buildComplexPoly = function(graphicsData, webGLData)
 {
-    //TODO - no need to copy this as it gets turned into a FLoat32Array anyways..
+    //TODO - no need to copy this as it gets turned into a FLoat32Array anyways.. id:136 gh:137
     var points = graphicsData.points.slice();
     if(points.length < 6)return;
 
@@ -32586,7 +32586,7 @@ PIXI.WebGLGraphics.buildComplexPoly = function(graphicsData, webGLData)
 
     // push a quad onto the end.. 
     
-    //TODO - this aint needed!
+    //TODO - this aint needed! id:119 gh:120
     var length = points.length / 2;
     for (i = 0; i < length; i++)
     {
@@ -32659,7 +32659,7 @@ PIXI.WebGLGraphicsData = function(gl)
 {
     this.gl = gl;
 
-    //TODO does this need to be split before uploding??
+    //TODO does this need to be split before uploding?? id:98 gh:99
     this.color = [0,0,0]; // color split!
     this.points = [];
     this.indices = [];
@@ -32799,7 +32799,7 @@ PIXI.CanvasGraphics.renderGraphics = function(graphics, context)
         }
         else if (data.type === PIXI.Graphics.CIRC)
         {
-            // TODO - need to be Undefined!
+            // TODO - need to be Undefined! id:96 gh:97
             context.beginPath();
             context.arc(shape.x, shape.y, shape.radius,0,2*Math.PI);
             context.closePath();
@@ -32952,7 +32952,7 @@ PIXI.CanvasGraphics.renderGraphicsMask = function(graphics, context)
         }
         else if (data.type === PIXI.Graphics.CIRC)
         {
-            // TODO - need to be Undefined!
+            // TODO - need to be Undefined! id:137 gh:138
             context.arc(shape.x, shape.y, shape.radius, 0, 2 * Math.PI);
             context.closePath();
         }
@@ -35065,7 +35065,7 @@ Phaser.Text.prototype.determineFontProperties = function (fontStyle) {
         }
 
         properties.descent = i - baseline;
-        //TODO might need a tweak. kind of a temp fix!
+        //TODO might need a tweak. kind of a temp fix! id:120 gh:121
         properties.descent += 6;
         properties.fontSize = properties.ascent + properties.descent;
 
@@ -38243,7 +38243,7 @@ Phaser.Device._initialize = function () {
             device.getUserMedia = false;
         }
 
-        // TODO: replace canvasBitBltShift detection with actual feature check
+        // TODO: replace canvasBitBltShift detection with actual feature check id:101 gh:102
 
         // Excludes iOS versions as they generally wrap UIWebView (eg. Safari WebKit) and it
         // is safer to not try and use the fast copy-over method.
@@ -45716,7 +45716,7 @@ Phaser.AnimationManager.prototype = {
     */
     refreshFrame: function () {
 
-        //  TODO
+        //  TODO id:100 gh:101
         // this.sprite.setTexture(PIXI.TextureCache[this.currentFrame.uuid]);
 
     },
@@ -62373,7 +62373,7 @@ Phaser.Physics.Arcade.prototype = {
     * An optional processCallback can be provided. If given this function will be called when two sprites are found to be colliding. It is called before any separation takes place,
     * giving you the chance to perform additional checks. If the function returns true then the collision and separation is carried out. If it returns false it is skipped.
     * The collideCallback is an optional function that is only called if two sprites collide. If a processCallback has been set then it needs to return true for collideCallback to be called.
-    * NOTE: This function is not recursive, and will not test against children of objects passed (i.e. Groups or Tilemaps within other Groups).
+    * NOTE: This function is not recursive, and will not test against children of objects passed (i.e. Groups or Tilemaps within other Groups). id:143 gh:144
     *
     * @method Phaser.Physics.Arcade#collide
     * @param {Phaser.Sprite|Phaser.Group|Phaser.Particles.Emitter|Phaser.TilemapLayer|array} object1 - The first object or array of objects to check. Can be Phaser.Sprite, Phaser.Group, Phaser.Particles.Emitter, or Phaser.TilemapLayer.
@@ -68574,7 +68574,7 @@ Phaser.Physics.P2.Body = function (game, sprite, x, y, mass) {
     this.force = new Phaser.Physics.P2.InversePointProxy(this.world, this.data.force);
 
     /**
-    * @property {Phaser.Point} gravity - A locally applied gravity force to the Body. Applied directly before the world step. NOTE: Not currently implemented.
+    * @property {Phaser.Point} gravity - A locally applied gravity force to the Body. Applied directly before the world step. NOTE: Not currently implemented. id:121 gh:122
     */
     this.gravity = new Phaser.Point();
 
@@ -75508,7 +75508,7 @@ Phaser.TilemapParser = {
             var curl = json.layers[i];
 
             // Base64 decode data if necessary
-            // NOTE: uncompressed base64 only.
+            // NOTE: uncompressed base64 only. id:104 gh:105
 
             if (!curl.compression && curl.encoding && curl.encoding === 'base64')
             {

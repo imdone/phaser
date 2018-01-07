@@ -10,7 +10,7 @@ var NextFrame = function (component)
 {
     var frame = component.currentFrame;
 
-    //  TODO: Add frame skip support
+    //  TODO: Add frame skip support id:268 gh:269
 
     if (frame.isLast)
     {

@@ -398,7 +398,7 @@ var World = new Class({
     velocityFromAngle: require('./utils/VelocityFromAngle'),
     velocityFromRotation: require('./utils/VelocityFromRotation'),
 
-    //  TODO
+    //  TODO id:278 gh:280
     collideGroupVsGroup: function (group1, group2, collideCallback, processCallback, callbackContext, overlapOnly)
     {
         if (group1.length === 0 || group2.length === 0)

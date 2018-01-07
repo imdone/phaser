@@ -166,7 +166,7 @@ declare module PIXI {
     }
 
     export interface ShaderAttribute {
-        // TODO: Find signature of shader attributes
+        // TODO: Find signature of shader attributes id:209 gh:210
     }
 
     export interface FilterBlock {
@@ -2404,7 +2404,7 @@ declare module PIXI {
         * Applies the filter to the specified area.
         * 
         * @param filter the filter that needs to be applied
-        * @param filterArea TODO - might need an update
+        * @param filterArea TODO - might need an update id:302 gh:303
         * @param width the horizontal range of the filter
         * @param height the vertical range of the filter
         */
@@ -2793,7 +2793,7 @@ declare module PIXI {
 
 
         /**
-        * TODO this does not belong here!
+        * TODO this does not belong here! id:255 gh:256
         * 
         * @param graphics -
         * @param webGLData -

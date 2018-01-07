@@ -208,7 +208,7 @@ var TweenManager = new Class({
     shutdown: require('./inc/Shutdown'),
     destroy: require('./inc/Destroy')
 
-    // TODO: kill: function (vars, target)
+    // TODO: kill: function (vars, target) id:266 gh:267
 });
 
 module.exports = TweenManager;

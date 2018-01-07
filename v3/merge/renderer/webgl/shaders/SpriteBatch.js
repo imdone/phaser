@@ -202,7 +202,7 @@ Phaser.Renderer.WebGL.Shaders.SpriteBatch.prototype = {
         {
             var indices = [];
 
-            // HACK: we bind an empty texture to avoid WebGL warning spam.
+            // HACK: we bind an empty texture to avoid WebGL warning spam. id:312 gh:313
             var tempTexture = gl.createTexture();
             gl.activeTexture(gl.TEXTURE0);
             gl.bindTexture(gl.TEXTURE_2D, tempTexture);

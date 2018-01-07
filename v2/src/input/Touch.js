@@ -282,7 +282,7 @@ Phaser.Touch.prototype = {
 
         //  event.targetTouches = list of all touches on the TARGET ELEMENT (i.e. game dom element)
         //  event.touches = list of all touches on the ENTIRE DOCUMENT, not just the target element
-        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them
+        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them id:202 gh:203
         for (var i = 0; i < event.changedTouches.length; i++)
         {
             this.game.input.startPointer(event.changedTouches[i]);
@@ -432,7 +432,7 @@ Phaser.Touch.prototype = {
 
         //  For touch end its a list of the touch points that have been removed from the surface
         //  https://developer.mozilla.org/en-US/docs/DOM/TouchList
-        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them
+        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them id:182 gh:183
         for (var i = 0; i < event.changedTouches.length; i++)
         {
             this.game.input.stopPointer(event.changedTouches[i]);

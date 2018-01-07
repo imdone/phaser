@@ -218,7 +218,7 @@ Phaser.TilemapParser = {
             var curl = json.layers[i];
 
             // Base64 decode data if necessary
-            // NOTE: uncompressed base64 only.
+            // NOTE: uncompressed base64 only. id:313 gh:314
 
             if (!curl.compression && curl.encoding && curl.encoding === 'base64')
             {

@@ -65,7 +65,7 @@ Phaser.PathFollower = function (path, follower, speed, rotationOffset, angularOf
     // it is set whenever this follower passes a counted PathPoint and the count is zero
     // it decrements each time the follower passes a counted PathPoint and the count is non-zero
     // when the count reaches zero it triggers EVENT_COUNT_FINISH
-    // NOTE: if there are multiple counted PathPoints this will not work as expected as there is only one count variable per follower!
+    // NOTE: if there are multiple counted PathPoints this will not work as expected as there is only one count variable per follower! id:310 gh:311
     this.branchCount = 0;
 
     this.branchPredicate = null;
@@ -118,9 +118,9 @@ Phaser.PathFollower = function (path, follower, speed, rotationOffset, angularOf
     follower.events.onPathPointReached = new Phaser.Signal(); // "follower has reached a PathPoint on the path"
     follower.events.onPathBranchReached = new Phaser.Signal(); // "follower has reached a branch and must choose a direction" (stay on this path or changePath to the branch)
 
-    /* TODO: */
+    /* TODO: id:277 gh:279*/
     follower.events.onCountFinished = new Phaser.Signal(); // "follower passed a counted point the specified number of times" */
-    follower.events.onPathStart = new Phaser.Signal(); // NOTE: not "follower started a path" but "follower moved backwards to the start of the path"
+    follower.events.onPathStart = new Phaser.Signal(); // NOTE: not "follower started a path" but "follower moved backwards to the start of the path" id:258 gh:259
     follower.events.onPathYoyo = new Phaser.Signal(); // "follower moved to the end of the path" but NOT if the path is looped, that generates EVENT_PATH_LOOPED instead
     follower.events.onPathEnd = new Phaser.Signal(); // "follower moved to the end of the path" but NOT if the path is looped, that generates EVENT_PATH_LOOPED instead
     follower.events.onPathLoop = new Phaser.Signal(); // "follower reached the end of a looped path and has started at the beginning again"
@@ -139,7 +139,7 @@ Phaser.PathFollower = function (path, follower, speed, rotationOffset, angularOf
 Phaser.PathFollower.EVENT_REACHED_POINT = "event_reached_point";   // "follower has reached a PathPoint on the path"
 Phaser.PathFollower.EVENT_BRANCH_CHOICE = "event_branch_choice";   // "follower has reached a branch and must choose a direction" (stay on this path or changePath to the branch)
 Phaser.PathFollower.EVENT_COUNT_FINISH = "event_count_finish";     // "follower passed a counted point the specified number of times"
-Phaser.PathFollower.EVENT_PATH_START = "event_path_start";         // NOTE: "a path started" but "follower moved backwards to the start of the path"
+Phaser.PathFollower.EVENT_PATH_START = "event_path_start";         // NOTE: "a path started" but "follower moved backwards to the start of the path" id:234 gh:235
 Phaser.PathFollower.EVENT_PATH_END = "event_path_end";             // "follower moved to the end of the path" but NOT if the path is looped, that generates EVENT_PATH_LOOPED instead
 Phaser.PathFollower.EVENT_PATH_LOOPED = "event_path_looped";       // "follower reached the end of a looped path and has started at the beginning again"
 

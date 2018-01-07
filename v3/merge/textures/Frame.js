@@ -86,7 +86,7 @@ Phaser.TextureFrame = function (texture, name, sourceIndex, x, y, width, height)
 
     /**
     * Is this a tiling texture? As used by the likes of a TilingSprite.
-    * TODO: Try and remove this, it shouldn't be here
+    * TODO: Try and remove this, it shouldn't be here id:263 gh:264
     *
     * @property {boolean} isTiling
     * @default
@@ -95,7 +95,7 @@ Phaser.TextureFrame = function (texture, name, sourceIndex, x, y, width, height)
 
     /**
     * This will let a renderer know that a tinted parent has updated its texture.
-    * TODO: Try and remove this, it shouldn't be here
+    * TODO: Try and remove this, it shouldn't be here id:242 gh:243
     *
     * @property {boolean} requiresReTint
     * @default

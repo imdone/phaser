@@ -481,7 +481,7 @@ Phaser.GameObject.TileSprite.prototype.getBounds = function () {
     maxY = y3 > maxY ? y3 : maxY;
     maxY = y4 > maxY ? y4 : maxY;
 
-    //  TODO: This is surely always undefined? As it's not set anywhere in the parent objects
+    //  TODO: This is surely always undefined? As it's not set anywhere in the parent objects id:219 gh:220
     var bounds = this._bounds;
 
     bounds.x = minX;

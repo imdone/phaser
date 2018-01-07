@@ -10,7 +10,7 @@ var PreviousFrame = function (component)
 {
     var frame = component.currentFrame;
 
-    //  TODO: Add frame skip support
+    //  TODO: Add frame skip support id:245 gh:246
 
     if (frame.isFirst)
     {

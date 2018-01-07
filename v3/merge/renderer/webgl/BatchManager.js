@@ -125,12 +125,12 @@ Phaser.Renderer.WebGL.BatchManager.prototype = {
 
     addCustomShader: function ()
     {
-        //  TODO
+        //  TODO id:311 gh:312
     },
 
     addFX: function ()
     {
-        //  TODO
+        //  TODO id:279 gh:278
     },
 
     addPixel: function (x0, y0, x1, y1, x2, y2, x3, y3, color)

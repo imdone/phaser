@@ -325,7 +325,7 @@ var Quaternion = new Class({
         var dot = a0 * a0 + a1 * a1 + a2 * a2 + a3 * a3;
         var invDot = (dot) ? 1 / dot : 0;
         
-        // TODO: Would be faster to return [0,0,0,0] immediately if dot == 0
+        // TODO: Would be faster to return [0,0,0,0] immediately if dot == 0 id:318 gh:319
 
         this.x = -a0 * invDot;
         this.y = -a1 * invDot;

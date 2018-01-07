@@ -1617,7 +1617,7 @@ Phaser.Text.prototype.determineFontProperties = function (fontStyle) {
         }
 
         properties.descent = i - baseline;
-        //TODO might need a tweak. kind of a temp fix!
+        //TODO might need a tweak. kind of a temp fix! id:224 gh:225
         properties.descent += 6;
         properties.fontSize = properties.ascent + properties.descent;
 

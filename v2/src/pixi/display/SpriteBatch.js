@@ -40,7 +40,7 @@ PIXI.SpriteBatch.prototype.constructor = PIXI.SpriteBatch;
  */
 PIXI.SpriteBatch.prototype.initWebGL = function(gl)
 {
-    // TODO only one needed for the whole engine really?
+    // TODO only one needed for the whole engine really? id:189 gh:190
     this.fastSpriteBatch = new PIXI.WebGLFastSpriteBatch(gl);
 
     this.ready = true;
@@ -54,7 +54,7 @@ PIXI.SpriteBatch.prototype.initWebGL = function(gl)
  */
 PIXI.SpriteBatch.prototype.updateTransform = function()
 {
-    // TODO don't need to!
+    // TODO don't need to! id:295 gh:296
     this.displayObjectUpdateTransform();
     //  PIXI.DisplayObjectContainer.prototype.updateTransform.call( this );
 };

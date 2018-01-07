@@ -361,7 +361,7 @@ Phaser.Physics.Ninja.Circle.prototype = {
                     //penetration in x is smaller; project in x
                     var dx = obj.pos.x - t.pos.x;//get sign for projection along x-axis
 
-                    //NOTE: should we handle the delta === 0 case?! and how? (project towards oldpos?)
+                    //NOTE: should we handle the delta === 0 case?! and how? (project towards oldpos?) id:226 gh:227
                     if (dx < 0)
                     {
                         obj.reportCollisionVsWorld(-x, 0, -1, 0, t);
@@ -378,7 +378,7 @@ Phaser.Physics.Ninja.Circle.prototype = {
                     //penetration in y is smaller; project in y
                     var dy = obj.pos.y - t.pos.y;//get sign for projection along y-axis
 
-                    //NOTE: should we handle the delta === 0 case?! and how? (project towards oldpos?)
+                    //NOTE: should we handle the delta === 0 case?! and how? (project towards oldpos?) id:205 gh:206
                     if (dy < 0)
                     {
                         obj.reportCollisionVsWorld(0, -y, 0, -1, t);

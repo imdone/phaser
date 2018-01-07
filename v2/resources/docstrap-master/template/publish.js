@@ -622,7 +622,7 @@ exports.publish = function ( taffyData, opts, tutorials ) {
 		}
 	}
 
-	// TODO: move the tutorial functions to templateHelper.js
+	// TODO: move the tutorial functions to templateHelper.js id:196 gh:197
 	function generateTutorial( title, tutorial, filename ) {
 		var tutorialData = {
 			title    : title,

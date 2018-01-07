@@ -124,7 +124,7 @@ var Bounds = require('../geometry/Bounds');
             }
 
             // add points in between when curving
-            // TODO: adaptive sampling
+            // TODO: adaptive sampling id:320 gh:321
             switch (segment.pathSegTypeAsLetter.toUpperCase()) {
 
             case 'C':

@@ -332,7 +332,7 @@ var Camera3D = new Class({
     {
         if (out === undefined) { out = new Vector4(); }
 
-        //  TODO: support viewport XY
+        //  TODO: support viewport XY id:285 gh:286
         var viewportWidth = this.viewportWidth;
         var viewportHeight = this.viewportHeight;
         var n = Camera3D.NEAR_RANGE;
@@ -470,7 +470,7 @@ var Camera3D = new Class({
     {
         if (out === undefined) { out = new Vector2(); }
 
-        //TODO: optimize this with a simple distance calculation:
+        //TODO: optimize this with a simple distance calculation: id:270 gh:271
         //https://developer.valvesoftware.com/wiki/Field_of_View
 
         if (this.billboardMatrixDirty)

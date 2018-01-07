@@ -405,7 +405,7 @@ Phaser.Path.prototype = {
     /**
     * Get a reference to a PathPoint from this Path, handle path looping.
     * 
-    * NOTE: because this is a PathPoint reference, it does not take into account the coordinateSystem selected, it will be WORLD, or OFFSET unmodified
+    * NOTE: because this is a PathPoint reference, it does not take into account the coordinateSystem selected, it will be WORLD, or OFFSET unmodified id:231 gh:232
     *
     * @method Phaser.Path#getPathPointReference
     * @param {number} index - The index of the point in this path to get.

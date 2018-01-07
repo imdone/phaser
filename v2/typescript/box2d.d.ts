@@ -3410,7 +3410,7 @@ declare module box2d {
         //  specified world point. This a soft constraint with a maximum 
         //  force. This allows the constraint to stretch and without 
         //  applying huge forces. 
-        //  NOTE: this joint is not documented in the manual because it 
+        //  NOTE: this joint is not documented in the manual because it  id:301 gh:302
         //  was developed to be used in the testbed. If you want to learn 
         //  how to use the mouse joint, look at the testbed. 
         constructor(def: b2MouseJointDef);

@@ -224,7 +224,7 @@ var Vector4 = new Class({
         return this;
     },
 
-    //  TODO: is this really the same as Vector3?
+    //  TODO: is this really the same as Vector3? id:289 gh:290
     //  Also, what about this: http://molecularmusings.wordpress.com/2013/05/24/a-faster-quaternion-vector-multiplication/
     transformQuat: function (q)
     {

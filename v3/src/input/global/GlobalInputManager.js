@@ -110,8 +110,8 @@ var GlobalInputManager = new Class({
         {
             var event = queue[i];
 
-            //  TODO: Move to CONSTs so we can do integer comparisons instead of strings.
-            //  TODO: Remove the MouseEvent events. Devs should use Pointer events instead.
+            //  TODO: Move to CONSTs so we can do integer comparisons instead of strings. id:250 gh:251
+            //  TODO: Remove the MouseEvent events. Devs should use Pointer events instead. id:316 gh:317
             switch (event.type)
             {
                 case 'mousemove':

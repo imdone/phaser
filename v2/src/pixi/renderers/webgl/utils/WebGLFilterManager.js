@@ -254,7 +254,7 @@ PIXI.WebGLFilterManager.prototype.popFilter = function()
         buffer =  currentFilter._glFilterTexture.frameBuffer;
     }
 
-    // TODO need to remove these global elements..
+    // TODO need to remove these global elements.. id:194 gh:195
     projection.x = sizeX/2;
     projection.y = -sizeY/2;
 
@@ -338,7 +338,7 @@ PIXI.WebGLFilterManager.prototype.popFilter = function()
 * 
 * @method applyFilterPass
 * @param filter {AbstractFilter} the filter that needs to be applied
-* @param filterArea {Texture} TODO - might need an update
+* @param filterArea {Texture} TODO - might need an update id:297 gh:298
 * @param width {Number} the horizontal range of the filter
 * @param height {Number} the vertical range of the filter
 */
