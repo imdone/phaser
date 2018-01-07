@@ -452,7 +452,7 @@ vec2.normalize = function(out, a) {
         y = a[1];
     var len = x*x + y*y;
     if (len > 0) {
-        //TODO: evaluate use of glm_invsqrt here?
+        //TODO: evaluate use of glm_invsqrt here? id:261 gh:262
         len = 1 / Math.sqrt(len);
         out[0] = a[0] * len;
         out[1] = a[1] * len;
@@ -1001,7 +1001,7 @@ vec3.normalize = function(out, a) {
         z = a[2];
     var len = x*x + y*y + z*z;
     if (len > 0) {
-        //TODO: evaluate use of glm_invsqrt here?
+        //TODO: evaluate use of glm_invsqrt here? id:241 gh:242
         len = 1 / Math.sqrt(len);
         out[0] = a[0] * len;
         out[1] = a[1] * len;
@@ -1712,7 +1712,7 @@ vec4.lerp = function (out, a, b, t) {
 vec4.random = function (out, scale) {
     scale = scale || 1.0;
 
-    //TODO: This is a pretty awful way of doing this. Find something better.
+    //TODO: This is a pretty awful way of doing this. Find something better. id:214 gh:215
     out[0] = GLMAT_RANDOM();
     out[1] = GLMAT_RANDOM();
     out[2] = GLMAT_RANDOM();
@@ -4150,7 +4150,7 @@ quat.invert = function(out, a) {
         dot = a0*a0 + a1*a1 + a2*a2 + a3*a3,
         invDot = dot ? 1.0/dot : 0;
     
-    // TODO: Would be faster to return [0,0,0,0] immediately if dot == 0
+    // TODO: Would be faster to return [0,0,0,0] immediately if dot == 0 id:304 gh:305
 
     out[0] = -a0*invDot;
     out[1] = -a1*invDot;
@@ -4218,7 +4218,7 @@ quat.normalize = vec4.normalize;
 /**
  * Creates a quaternion from the given 3x3 rotation matrix.
  *
- * NOTE: The resultant quaternion is not normalized, so you should be sure
+ * NOTE: The resultant quaternion is not normalized, so you should be sure id:265 gh:266
  * to renormalize the quaternion yourself where necessary.
  *
  * @param {quat} out the receiving quaternion

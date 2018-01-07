@@ -718,7 +718,7 @@ Phaser.Cache.prototype = {
                 break;
         }
 
-        //  TODO: XML + Pyxel
+        //  TODO: XML + Pyxel id:249 gh:250
 
         /*
         if (format === Phaser.Loader.TEXTURE_ATLAS_XML_STARLING)

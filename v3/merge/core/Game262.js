@@ -71,7 +71,7 @@
 Phaser.Game = function (width, height, renderer, parent, state, pixelArt)
 {
     /**
-    * TODO: Remove this
+    * TODO: Remove this id:243 gh:244
     * @property {number} id - Phaser Game ID
     * @readonly
     */

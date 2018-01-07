@@ -401,7 +401,7 @@ Phaser.Renderer.WebGL.FilterManager.prototype = {
     * 
     * @method applyFilterPass
     * @param filter {Phaser.Filter} the filter that needs to be applied
-    * @param filterArea {Texture} TODO - might need an update
+    * @param filterArea {Texture} TODO - might need an update id:260 gh:261
     * @param width {Number} the horizontal range of the filter
     * @param height {Number} the vertical range of the filter
     */

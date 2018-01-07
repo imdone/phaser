@@ -151,7 +151,7 @@ Phaser.Renderer.WebGL.Shaders.Strip.prototype = {
         {
             var indices = [];
 
-            // HACK: we bind an empty texture to avoid WebGL warning spam.
+            // HACK: we bind an empty texture to avoid WebGL warning spam. id:281 gh:282
             var tempTexture = gl.createTexture();
             gl.activeTexture(gl.TEXTURE0);
             gl.bindTexture(gl.TEXTURE_2D, tempTexture);

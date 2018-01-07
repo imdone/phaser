@@ -118,7 +118,7 @@ PIXI.WebGLStencilManager.prototype.pushStencil = function(graphics, webGLData, r
 };
 
 /**
- * TODO this does not belong here!
+ * TODO this does not belong here! id:299 gh:300
  * 
  * @method bindGraphics
  * @param graphics {Graphics}

@@ -4,7 +4,7 @@
 * @class Detector
 */
 
-// TODO: speculative contacts
+// TODO: speculative contacts id:290 gh:291
 
 var Detector = {};
 

@@ -1578,7 +1578,7 @@ Narrowphase.prototype.convexLine = function(
     lineAngle,
     justTest
 ){
-    // TODO
+    // TODO id:103 gh:104
     if(justTest){
         return false;
     } else {
@@ -1612,7 +1612,7 @@ Narrowphase.prototype.lineBox = function(
     boxAngle,
     justTest
 ){
-    // TODO
+    // TODO id:147 gh:148
     if(justTest){
         return false;
     } else {
@@ -1706,7 +1706,7 @@ Narrowphase.prototype.lineCapsule = function(
     capsuleAngle,
     justTest
 ){
-    // TODO
+    // TODO id:122 gh:123
     if(justTest){
         return false;
     } else {
@@ -1848,7 +1848,7 @@ Narrowphase.prototype.lineLine = function(
     angleB,
     justTest
 ){
-    // TODO
+    // TODO id:107 gh:108
     if(justTest){
         return false;
     } else {
@@ -3431,7 +3431,7 @@ Narrowphase.prototype.circleHeightfield = function( circleBody,circleShape,circl
     /*
     if(circlePos[1]+radius < min){
         // Below the minimum point... We can just guess.
-        // TODO
+        // TODO id:106 gh:107
     }
     */
 
@@ -3605,7 +3605,7 @@ Narrowphase.prototype.convexHeightfield = function( convexBody,convexShape,conve
     var numContacts = 0;
 
     // Loop over all edges
-    // TODO: If possible, construct a convex from several data points (need o check if the points make a convex shape)
+    // TODO: If possible, construct a convex from several data points (need o check if the points make a convex shape) id:148 gh:149
     for(var i=idxA; i<idxB; i++){
 
         // Get points
@@ -7473,7 +7473,7 @@ vec2.normalize = function(out, a) {
         y = a[1];
     var len = x*x + y*y;
     if (len > 0) {
-        //TODO: evaluate use of glm_invsqrt here?
+        //TODO: evaluate use of glm_invsqrt here? id:123 gh:124
         len = 1 / Math.sqrt(len);
         out[0] = a[0] * len;
         out[1] = a[1] * len;
@@ -15766,7 +15766,7 @@ PIXI.SpriteBatch.prototype.constructor = PIXI.SpriteBatch;
  */
 PIXI.SpriteBatch.prototype.initWebGL = function(gl)
 {
-    // TODO only one needed for the whole engine really?
+    // TODO only one needed for the whole engine really? id:109 gh:110
     this.fastSpriteBatch = new PIXI.WebGLFastSpriteBatch(gl);
 
     this.ready = true;
@@ -15780,7 +15780,7 @@ PIXI.SpriteBatch.prototype.initWebGL = function(gl)
  */
 PIXI.SpriteBatch.prototype.updateTransform = function()
 {
-    // TODO don't need to!
+    // TODO don't need to! id:108 gh:109
     this.displayObjectUpdateTransform();
     //  PIXI.DisplayObjectContainer.prototype.updateTransform.call( this );
 };
@@ -17919,7 +17919,7 @@ PIXI.WebGLStencilManager.prototype.pushStencil = function(graphics, webGLData, r
 };
 
 /**
- * TODO this does not belong here!
+ * TODO this does not belong here! id:150 gh:151
  * 
  * @method bindGraphics
  * @param graphics {Graphics}
@@ -18655,7 +18655,7 @@ PIXI.WebGLSpriteBatch.prototype.renderTilingSprite = function(sprite)
     var width = sprite.width;
     var height = sprite.height;
 
-    // TODO trim??
+    // TODO trim?? id:125 gh:126
     var aX = sprite.anchor.x;
     var aY = sprite.anchor.y;
     var w0 = width * (1-aX);
@@ -18848,7 +18848,7 @@ PIXI.WebGLSpriteBatch.prototype.flush = function()
                 var projection = this.renderSession.projection;
                 gl.uniform2f(shader.projectionVector, projection.x, projection.y);
 
-                // TODO - this is temporary!
+                // TODO - this is temporary! id:111 gh:112
                 var offsetVector = this.renderSession.offset;
                 gl.uniform2f(shader.offsetVector, offsetVector.x, offsetVector.y);
 
@@ -19152,7 +19152,7 @@ PIXI.WebGLFastSpriteBatch.prototype.renderSprite = function(sprite)
     //sprite = children[i];
     if(!sprite.visible)return;
     
-    // TODO trim??
+    // TODO trim?? id:113 gh:114
     if(sprite.texture.baseTexture !== this.currentBaseTexture && !sprite.texture.baseTexture.skipRender)
     {
         this.flush();
@@ -19621,7 +19621,7 @@ PIXI.WebGLFilterManager.prototype.popFilter = function()
         buffer =  currentFilter._glFilterTexture.frameBuffer;
     }
 
-    // TODO need to remove these global elements..
+    // TODO need to remove these global elements.. id:152 gh:153
     projection.x = sizeX/2;
     projection.y = -sizeY/2;
 
@@ -19705,7 +19705,7 @@ PIXI.WebGLFilterManager.prototype.popFilter = function()
 * 
 * @method applyFilterPass
 * @param filter {AbstractFilter} the filter that needs to be applied
-* @param filterArea {Texture} TODO - might need an update
+* @param filterArea {Texture} TODO - might need an update id:128 gh:129
 * @param width {Number} the horizontal range of the filter
 * @param height {Number} the vertical range of the filter
 */
@@ -21609,7 +21609,7 @@ PIXI.Strip.prototype._renderWebGL = function(renderSession)
 
     renderSession.spriteBatch.start();
 
-    //TODO check culling
+    //TODO check culling id:115 gh:116
 };
 
 PIXI.Strip.prototype._initWebGL = function(renderSession)
@@ -21895,8 +21895,8 @@ PIXI.Strip.prototype.renderStripFlat = function(strip)
 /*
 PIXI.Strip.prototype.setTexture = function(texture)
 {
-    //TODO SET THE TEXTURES
-    //TODO VISIBILITY
+    //TODO SET THE TEXTURES id:117 gh:118
+    //TODO VISIBILITY id:153 gh:154
 
     // stop current texture
     this.texture = texture;
@@ -40824,7 +40824,7 @@ Phaser.Touch.prototype = {
 
         //  event.targetTouches = list of all touches on the TARGET ELEMENT (i.e. game dom element)
         //  event.touches = list of all touches on the ENTIRE DOCUMENT, not just the target element
-        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them
+        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them id:134 gh:135
         for (var i = 0; i < event.changedTouches.length; i++)
         {
             this.game.input.startPointer(event.changedTouches[i]);
@@ -40974,7 +40974,7 @@ Phaser.Touch.prototype = {
 
         //  For touch end its a list of the touch points that have been removed from the surface
         //  https://developer.mozilla.org/en-US/docs/DOM/TouchList
-        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them
+        //  event.changedTouches = the touches that CHANGED in this event, not the total number of them id:170 gh:171
         for (var i = 0; i < event.changedTouches.length; i++)
         {
             this.game.input.stopPointer(event.changedTouches[i]);
@@ -54961,7 +54961,7 @@ PIXI.WebGLGraphics.buildCircle = function(graphicsData, webGLData)
     var width;
     var height;
     
-    // TODO - bit hacky??
+    // TODO - bit hacky?? id:124 gh:125
     if(graphicsData.type === PIXI.Graphics.CIRC)
     {
         width = circleData.radius;
@@ -55037,7 +55037,7 @@ PIXI.WebGLGraphics.buildCircle = function(graphicsData, webGLData)
  */
 PIXI.WebGLGraphics.buildLine = function(graphicsData, webGLData)
 {
-    // TODO OPTIMISE!
+    // TODO OPTIMISE! id:154 gh:155
     var i = 0;
     var points = graphicsData.points;
     if(points.length === 0)return;
@@ -55249,7 +55249,7 @@ PIXI.WebGLGraphics.buildLine = function(graphicsData, webGLData)
  */
 PIXI.WebGLGraphics.buildComplexPoly = function(graphicsData, webGLData)
 {
-    //TODO - no need to copy this as it gets turned into a FLoat32Array anyways..
+    //TODO - no need to copy this as it gets turned into a FLoat32Array anyways.. id:138 gh:139
     var points = graphicsData.points.slice();
     if(points.length < 6)return;
 
@@ -55291,7 +55291,7 @@ PIXI.WebGLGraphics.buildComplexPoly = function(graphicsData, webGLData)
 
     // push a quad onto the end.. 
     
-    //TODO - this aint needed!
+    //TODO - this aint needed! id:173 gh:174
     var length = points.length / 2;
     for (i = 0; i < length; i++)
     {
@@ -55364,7 +55364,7 @@ PIXI.WebGLGraphicsData = function(gl)
 {
     this.gl = gl;
 
-    //TODO does this need to be split before uploding??
+    //TODO does this need to be split before uploding?? id:127 gh:128
     this.color = [0,0,0]; // color split!
     this.points = [];
     this.indices = [];
@@ -55504,7 +55504,7 @@ PIXI.CanvasGraphics.renderGraphics = function(graphics, context)
         }
         else if (data.type === PIXI.Graphics.CIRC)
         {
-            // TODO - need to be Undefined!
+            // TODO - need to be Undefined! id:155 gh:156
             context.beginPath();
             context.arc(shape.x, shape.y, shape.radius,0,2*Math.PI);
             context.closePath();
@@ -55657,7 +55657,7 @@ PIXI.CanvasGraphics.renderGraphicsMask = function(graphics, context)
         }
         else if (data.type === PIXI.Graphics.CIRC)
         {
-            // TODO - need to be Undefined!
+            // TODO - need to be Undefined! id:140 gh:141
             context.arc(shape.x, shape.y, shape.radius, 0, 2 * Math.PI);
             context.closePath();
         }
@@ -57770,7 +57770,7 @@ Phaser.Text.prototype.determineFontProperties = function (fontStyle) {
         }
 
         properties.descent = i - baseline;
-        //TODO might need a tweak. kind of a temp fix!
+        //TODO might need a tweak. kind of a temp fix! id:181 gh:182
         properties.descent += 6;
         properties.fontSize = properties.ascent + properties.descent;
 
@@ -60948,7 +60948,7 @@ Phaser.Device._initialize = function () {
             device.getUserMedia = false;
         }
 
-        // TODO: replace canvasBitBltShift detection with actual feature check
+        // TODO: replace canvasBitBltShift detection with actual feature check id:129 gh:130
 
         // Excludes iOS versions as they generally wrap UIWebView (eg. Safari WebKit) and it
         // is safer to not try and use the fast copy-over method.
@@ -68421,7 +68421,7 @@ Phaser.AnimationManager.prototype = {
     */
     refreshFrame: function () {
 
-        //  TODO
+        //  TODO id:156 gh:157
         // this.sprite.setTexture(PIXI.TextureCache[this.currentFrame.uuid]);
 
     },
@@ -85078,7 +85078,7 @@ Phaser.Physics.Arcade.prototype = {
     * An optional processCallback can be provided. If given this function will be called when two sprites are found to be colliding. It is called before any separation takes place,
     * giving you the chance to perform additional checks. If the function returns true then the collision and separation is carried out. If it returns false it is skipped.
     * The collideCallback is an optional function that is only called if two sprites collide. If a processCallback has been set then it needs to return true for collideCallback to be called.
-    * NOTE: This function is not recursive, and will not test against children of objects passed (i.e. Groups or Tilemaps within other Groups).
+    * NOTE: This function is not recursive, and will not test against children of objects passed (i.e. Groups or Tilemaps within other Groups). id:141 gh:142
     *
     * @method Phaser.Physics.Arcade#collide
     * @param {Phaser.Sprite|Phaser.Group|Phaser.Particles.Emitter|Phaser.TilemapLayer|array} object1 - The first object or array of objects to check. Can be Phaser.Sprite, Phaser.Group, Phaser.Particles.Emitter, or Phaser.TilemapLayer.
@@ -91279,7 +91279,7 @@ Phaser.Physics.P2.Body = function (game, sprite, x, y, mass) {
     this.force = new Phaser.Physics.P2.InversePointProxy(this.world, this.data.force);
 
     /**
-    * @property {Phaser.Point} gravity - A locally applied gravity force to the Body. Applied directly before the world step. NOTE: Not currently implemented.
+    * @property {Phaser.Point} gravity - A locally applied gravity force to the Body. Applied directly before the world step. NOTE: Not currently implemented. id:185 gh:186
     */
     this.gravity = new Phaser.Point();
 
@@ -98213,7 +98213,7 @@ Phaser.TilemapParser = {
             var curl = json.layers[i];
 
             // Base64 decode data if necessary
-            // NOTE: uncompressed base64 only.
+            // NOTE: uncompressed base64 only. id:131 gh:132
 
             if (!curl.compression && curl.encoding && curl.encoding === 'base64')
             {

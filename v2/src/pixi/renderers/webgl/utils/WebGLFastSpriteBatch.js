@@ -214,7 +214,7 @@ PIXI.WebGLFastSpriteBatch.prototype.renderSprite = function(sprite)
     //sprite = children[i];
     if(!sprite.visible)return;
     
-    // TODO trim??
+    // TODO trim?? id:218 gh:219
     if(sprite.texture.baseTexture !== this.currentBaseTexture && !sprite.texture.baseTexture.skipRender)
     {
         this.flush();

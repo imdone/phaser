@@ -92,7 +92,7 @@ PIXI.Strip.prototype._renderWebGL = function(renderSession)
 
     renderSession.spriteBatch.start();
 
-    //TODO check culling
+    //TODO check culling id:233 gh:234
 };
 
 PIXI.Strip.prototype._initWebGL = function(renderSession)
@@ -378,8 +378,8 @@ PIXI.Strip.prototype.renderStripFlat = function(strip)
 /*
 PIXI.Strip.prototype.setTexture = function(texture)
 {
-    //TODO SET THE TEXTURES
-    //TODO VISIBILITY
+    //TODO SET THE TEXTURES id:215 gh:216
+    //TODO VISIBILITY id:191 gh:192
 
     // stop current texture
     this.texture = texture;

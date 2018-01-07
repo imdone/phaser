@@ -397,7 +397,7 @@ PIXI.WebGLSpriteBatch.prototype.renderTilingSprite = function(sprite)
     var width = sprite.width;
     var height = sprite.height;
 
-    // TODO trim??
+    // TODO trim?? id:225 gh:226
     var aX = sprite.anchor.x;
     var aY = sprite.anchor.y;
     var w0 = width * (1-aX);
@@ -590,7 +590,7 @@ PIXI.WebGLSpriteBatch.prototype.flush = function()
                 var projection = this.renderSession.projection;
                 gl.uniform2f(shader.projectionVector, projection.x, projection.y);
 
-                // TODO - this is temporary!
+                // TODO - this is temporary! id:200 gh:201
                 var offsetVector = this.renderSession.offset;
                 gl.uniform2f(shader.offsetVector, offsetVector.x, offsetVector.y);
 

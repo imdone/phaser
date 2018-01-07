@@ -17,7 +17,7 @@ var ParseTileLayers = function (json, insertNull)
 
         var curl = json.layers[i];
 
-        // Base64 decode data if necessary. NOTE: uncompressed base64 only.
+        // Base64 decode data if necessary. NOTE: uncompressed base64 only. id:272 gh:273
         if (curl.compression)
         {
             console.warn(

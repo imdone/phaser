@@ -330,7 +330,7 @@ var World = new Class({
 
     destroy: function ()
     {
-        //  TODO
+        //  TODO id:319 gh:320
         this.shutdown();
     }
 

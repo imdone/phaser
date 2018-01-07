@@ -8,7 +8,7 @@
 * @class Vector
 */
 
-// TODO: consider params for reusing vector objects
+// TODO: consider params for reusing vector objects id:291 gh:292
 
 var Vector = {};
 

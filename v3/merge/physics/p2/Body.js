@@ -71,7 +71,7 @@ Phaser.Physics.P2.Body = function (game, sprite, x, y, mass) {
     this.force = new Phaser.Physics.P2.InversePointProxy(this.world, this.data.force);
 
     /**
-    * @property {Phaser.Point} gravity - A locally applied gravity force to the Body. Applied directly before the world step. NOTE: Not currently implemented.
+    * @property {Phaser.Point} gravity - A locally applied gravity force to the Body. Applied directly before the world step. NOTE: Not currently implemented. id:223 gh:224
     */
     this.gravity = new Phaser.Point();
 

@@ -16,7 +16,7 @@ var Progress = function (value)
     }
     else
     {
-        //  TODO: Set progress
+        //  TODO: Set progress id:286 gh:287
 
         return this;
     }

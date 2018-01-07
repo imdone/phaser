@@ -25,7 +25,7 @@ var Begin = function ()
         {
             current.splice(index, 1);
 
-            //  TODO: Clear from _draggable, _drag and _over too
+            //  TODO: Clear from _draggable, _drag and _over too id:287 gh:288
 
             this.clear(gameObject);
         }

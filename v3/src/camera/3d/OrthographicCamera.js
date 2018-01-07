@@ -49,7 +49,7 @@ var OrthographicCamera = new Class({
 
     update: function ()
     {
-        //TODO: support x/y offset
+        //TODO: support x/y offset id:247 gh:248
         var w = this.viewportWidth;
         var h = this.viewportHeight;
         var near = Math.abs(this.near);

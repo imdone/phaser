@@ -268,7 +268,7 @@ var Systems = new Class({
         }
     },
 
-    //  TODO: Game level nuke
+    //  TODO: Game level nuke id:282 gh:283
     destroy: function ()
     {
         this.add.destroy();

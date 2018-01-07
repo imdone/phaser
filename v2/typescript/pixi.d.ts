@@ -166,7 +166,7 @@ declare module PIXI {
     }
 
     export interface ShaderAttribute {
-        // TODO: Find signature of shader attributes
+        // TODO: Find signature of shader attributes id:239 gh:240
     }
 
     export interface FilterBlock {

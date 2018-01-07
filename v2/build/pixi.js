@@ -2153,7 +2153,7 @@ PIXI.SpriteBatch.prototype.constructor = PIXI.SpriteBatch;
  */
 PIXI.SpriteBatch.prototype.initWebGL = function(gl)
 {
-    // TODO only one needed for the whole engine really?
+    // TODO only one needed for the whole engine really? id:157 gh:158
     this.fastSpriteBatch = new PIXI.WebGLFastSpriteBatch(gl);
 
     this.ready = true;
@@ -2167,7 +2167,7 @@ PIXI.SpriteBatch.prototype.initWebGL = function(gl)
  */
 PIXI.SpriteBatch.prototype.updateTransform = function()
 {
-    // TODO don't need to!
+    // TODO don't need to! id:144 gh:145
     this.displayObjectUpdateTransform();
     //  PIXI.DisplayObjectContainer.prototype.updateTransform.call( this );
 };
@@ -4306,7 +4306,7 @@ PIXI.WebGLStencilManager.prototype.pushStencil = function(graphics, webGLData, r
 };
 
 /**
- * TODO this does not belong here!
+ * TODO this does not belong here! id:190 gh:191
  * 
  * @method bindGraphics
  * @param graphics {Graphics}
@@ -5042,7 +5042,7 @@ PIXI.WebGLSpriteBatch.prototype.renderTilingSprite = function(sprite)
     var width = sprite.width;
     var height = sprite.height;
 
-    // TODO trim??
+    // TODO trim?? id:132 gh:133
     var aX = sprite.anchor.x;
     var aY = sprite.anchor.y;
     var w0 = width * (1-aX);
@@ -5235,7 +5235,7 @@ PIXI.WebGLSpriteBatch.prototype.flush = function()
                 var projection = this.renderSession.projection;
                 gl.uniform2f(shader.projectionVector, projection.x, projection.y);
 
-                // TODO - this is temporary!
+                // TODO - this is temporary! id:159 gh:160
                 var offsetVector = this.renderSession.offset;
                 gl.uniform2f(shader.offsetVector, offsetVector.x, offsetVector.y);
 
@@ -5539,7 +5539,7 @@ PIXI.WebGLFastSpriteBatch.prototype.renderSprite = function(sprite)
     //sprite = children[i];
     if(!sprite.visible)return;
     
-    // TODO trim??
+    // TODO trim?? id:145 gh:146
     if(sprite.texture.baseTexture !== this.currentBaseTexture && !sprite.texture.baseTexture.skipRender)
     {
         this.flush();
@@ -6008,7 +6008,7 @@ PIXI.WebGLFilterManager.prototype.popFilter = function()
         buffer =  currentFilter._glFilterTexture.frameBuffer;
     }
 
-    // TODO need to remove these global elements..
+    // TODO need to remove these global elements.. id:192 gh:193
     projection.x = sizeX/2;
     projection.y = -sizeY/2;
 
@@ -6092,7 +6092,7 @@ PIXI.WebGLFilterManager.prototype.popFilter = function()
 * 
 * @method applyFilterPass
 * @param filter {AbstractFilter} the filter that needs to be applied
-* @param filterArea {Texture} TODO - might need an update
+* @param filterArea {Texture} TODO - might need an update id:139 gh:140
 * @param width {Number} the horizontal range of the filter
 * @param height {Number} the vertical range of the filter
 */
@@ -7996,7 +7996,7 @@ PIXI.Strip.prototype._renderWebGL = function(renderSession)
 
     renderSession.spriteBatch.start();
 
-    //TODO check culling
+    //TODO check culling id:161 gh:162
 };
 
 PIXI.Strip.prototype._initWebGL = function(renderSession)
@@ -8282,8 +8282,8 @@ PIXI.Strip.prototype.renderStripFlat = function(strip)
 /*
 PIXI.Strip.prototype.setTexture = function(texture)
 {
-    //TODO SET THE TEXTURES
-    //TODO VISIBILITY
+    //TODO SET THE TEXTURES id:149 gh:150
+    //TODO VISIBILITY id:195 gh:196
 
     // stop current texture
     this.texture = texture;

@@ -457,7 +457,7 @@ PIXI.WebGLGraphics.buildCircle = function(graphicsData, webGLData)
     var width;
     var height;
     
-    // TODO - bit hacky??
+    // TODO - bit hacky?? id:237 gh:238
     if(graphicsData.type === PIXI.Graphics.CIRC)
     {
         width = circleData.radius;
@@ -533,7 +533,7 @@ PIXI.WebGLGraphics.buildCircle = function(graphicsData, webGLData)
  */
 PIXI.WebGLGraphics.buildLine = function(graphicsData, webGLData)
 {
-    // TODO OPTIMISE!
+    // TODO OPTIMISE! id:222 gh:223
     var i = 0;
     var points = graphicsData.points;
     if(points.length === 0)return;
@@ -745,7 +745,7 @@ PIXI.WebGLGraphics.buildLine = function(graphicsData, webGLData)
  */
 PIXI.WebGLGraphics.buildComplexPoly = function(graphicsData, webGLData)
 {
-    //TODO - no need to copy this as it gets turned into a FLoat32Array anyways..
+    //TODO - no need to copy this as it gets turned into a FLoat32Array anyways.. id:197 gh:198
     var points = graphicsData.points.slice();
     if(points.length < 6)return;
 
@@ -787,7 +787,7 @@ PIXI.WebGLGraphics.buildComplexPoly = function(graphicsData, webGLData)
 
     // push a quad onto the end.. 
     
-    //TODO - this aint needed!
+    //TODO - this aint needed! id:298 gh:299
     var length = points.length / 2;
     for (i = 0; i < length; i++)
     {
@@ -860,7 +860,7 @@ PIXI.WebGLGraphicsData = function(gl)
 {
     this.gl = gl;
 
-    //TODO does this need to be split before uploding??
+    //TODO does this need to be split before uploding?? id:240 gh:241
     this.color = [0,0,0]; // color split!
     this.points = [];
     this.indices = [];

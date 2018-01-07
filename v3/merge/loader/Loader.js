@@ -1808,7 +1808,7 @@ Phaser.Loader.prototype = {
 
         for (i = 0; i < textureURLs.length; i++)
         {
-            //  TODO - Add support for compressed textures
+            //  TODO - Add support for compressed textures id:220 gh:221
             multiKey = '_MA_' + key + '_' + i.toString();
 
             imgs.push(multiKey);

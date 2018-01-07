@@ -1385,7 +1385,7 @@ PIXI.CanvasGraphics.renderGraphics = function(graphics, context)
         }
         else if (data.type === PIXI.Graphics.CIRC)
         {
-            // TODO - need to be Undefined!
+            // TODO - need to be Undefined! id:178 gh:179
             context.beginPath();
             context.arc(shape.x, shape.y, shape.radius,0,2*Math.PI);
             context.closePath();
@@ -1538,7 +1538,7 @@ PIXI.CanvasGraphics.renderGraphicsMask = function(graphics, context)
         }
         else if (data.type === PIXI.Graphics.CIRC)
         {
-            // TODO - need to be Undefined!
+            // TODO - need to be Undefined! id:169 gh:170
             context.arc(shape.x, shape.y, shape.radius, 0, 2 * Math.PI);
             context.closePath();
         }

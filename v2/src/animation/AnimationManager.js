@@ -396,7 +396,7 @@ Phaser.AnimationManager.prototype = {
     */
     refreshFrame: function () {
 
-        //  TODO
+        //  TODO id:177 gh:178
         // this.sprite.setTexture(PIXI.TextureCache[this.currentFrame.uuid]);
 
     },
